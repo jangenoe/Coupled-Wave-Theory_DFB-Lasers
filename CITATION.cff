@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: Kogelnik & Shank Coupled-Wave-Theory Distributed Feedback Lasers
+message: >-
+  If you use this software, please cite it using the following metadata.
+type: software
+authors:
+  - given-names: Jan
+    family-names: Genoe
+    email: jan.genoe@kuleuven.be
+    affiliation: KULeuven and imec
+    orcid: 'https://orcid.org/0000-0002-4019-5979'
+repository-code: >-
+  https://github.com/jangenoe/Kogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers
+url: >-
+  https://jangenoe.github.io/Kogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers/intro.html
+keywords:
+  - Coupled-Wave Theory
+  - DFB Lasers
+  - Lasers
+  - Distributed Feedback Lasers
+license: MIT
