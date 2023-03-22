@@ -16,7 +16,15 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r .github/requirements-Book.txt
-        sudo apt-get install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra latexmk
+        sudo apt-get -qq update
+        sudo apt-get install -y     \
+          texlive-latex-recommended \
+          texlive-latex-extra       \
+          texlive-fonts-extra       \
+          fonts-freefont-otf        \
+          texlive-xetex             \
+          latexmk                   \
+          xindy
     - name: Build the Jupyterbook website
       run: |
         jb build ./
