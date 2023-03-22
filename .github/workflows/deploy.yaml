@@ -50,7 +50,7 @@ jobs:
     - name: Build the Jupyterbook website
       run: |
         jb build ./ --builder pdflatex
-        mv ./_build/latex/python.pdf ./_build/html/Coupled-Wave-Theory_DFB-Lasers.pdf
+        # mv ./_build/latex/python.pdf ./_build/html/Coupled-Wave-Theory_DFB-Lasers.pdf
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3
       with:
@@ -75,8 +75,8 @@ jobs:
         mkdir files
         cp Kogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers.ipynb files/Kogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers.ipynb
         cp NanoimprintedDFB.ipynb files/NanoimprintedDFB.ipynb
-        cp data files/data
-        cp images files/images
+        cp -r data files/data
+        cp -r images files/images
     - name: Build the JupyterLite site
       run: |
         jupyter lite build  --output-dir dist/
