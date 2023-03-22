@@ -70,6 +70,12 @@ jobs:
     - name: Install the dependencies
       run: |
         pip install -r .github/requirements-Lite.txt
+- name: Copy common files
+      run: |
+        cp Kogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers.ipynb files/Kogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers.ipynb
+        cp NanoimprintedDFB.ipynb files/NanoimprintedDFB.ipynb
+        cp data files/data
+        cp images files/images
     - name: Build the JupyterLite site
       run: |
         jupyter lite build  --output-dir dist/
