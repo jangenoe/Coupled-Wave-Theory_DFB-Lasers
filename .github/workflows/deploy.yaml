@@ -16,6 +16,27 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r .github/requirements-Book.txt
+    - name: Build the Jupyterbook website
+      run: |
+        jb build ./
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_build/html
+        
+  build-and-deploy-book-pdf:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+    - name: Install dependencies
+      run: |
+        pip install -r .github/requirements-Book.txt
         sudo apt-get -qq update
         sudo apt-get install -y     \
           texlive-latex-recommended \
@@ -27,14 +48,13 @@ jobs:
           xindy
     - name: Build the Jupyterbook website
       run: |
-        jb build ./
         jb build ./ --builder pdflatex
         mv ./_build/latex/python.pdf ./_build/html/Coupled-Wave-Theory_DFB-Lasers.pdf
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_build/html
+        publish_dir: ./_build/html/Coupled-Wave-Theory_DFB-Lasers.pdf
         
   build-jupyter-lite:
     needs: build-and-deploy-book
