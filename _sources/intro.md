@@ -3,6 +3,8 @@
 This repository applies the calculations of Kogelnik and Shank in J. Appl. Phys. 43, 2327 (1972) [1] to a few use cases. 
 The calculations have been validated by replotting the graphs from [1].
 
+
+## Table of contents
 ```{tableofcontents}
 ```
 
