@@ -72,6 +72,7 @@ jobs:
         pip install -r .github/requirements-Lite.txt
     - name: Copy common files
       run: |
+        mkdir files
         cp Kogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers.ipynb files/Kogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers.ipynb
         cp NanoimprintedDFB.ipynb files/NanoimprintedDFB.ipynb
         cp data files/data
