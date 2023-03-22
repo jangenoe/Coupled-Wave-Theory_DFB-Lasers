@@ -26,6 +26,7 @@ jobs:
         publish_dir: ./_build/html
         
   build-and-deploy-book-pdf:
+    needs: build-and-deploy-book
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
