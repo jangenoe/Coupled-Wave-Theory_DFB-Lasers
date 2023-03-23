@@ -1,5 +1,5 @@
 title: Coupled Wave Theory of Distributed Feedback Lasers
-author: Jan Genoe (jan.genoe@imec.be)
+author: Jan Genoe, Iakov Goldberg, Nirav Annavarapu, Simon Leitner, Robert Gehlhaar
 logo: images/logo.png
 description: calculations of distributed feedback lasers based on coupled wave theory
 only_build_toc_files: true
@@ -37,5 +37,4 @@ sphinx:
         \AtBeginEnvironment{figure}{\pretocmd{\hyperlink}{\protect}{}{}}  
     bibtex_reference_style: label
     bibtex_default_style : "unsrt"
-
 
