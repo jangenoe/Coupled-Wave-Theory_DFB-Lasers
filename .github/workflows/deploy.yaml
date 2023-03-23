@@ -50,7 +50,7 @@ jobs:
     - name: Build the Jupyterbook website
       run: |
         jb build ./files/ --builder pdflatex
-        # mv ./files/_build/latex/python.pdf ./files/_build/latex/Coupled-Wave-Theory_DFB-Lasers.pdf
+        mv ./files/_build/latex/python.pdf ./files/_build/latex/Coupled-Wave-Theory_DFB-Lasers.pdf
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3
       with:
