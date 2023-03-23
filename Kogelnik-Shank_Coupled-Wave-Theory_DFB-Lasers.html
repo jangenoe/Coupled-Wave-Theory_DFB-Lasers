@@ -1,0 +1,784 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Coupled‐Wave Theory of Distributed Feedback Lasers &#8212; Coupled Wave Theory of Distributed Feedback Lasers</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Kogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="UV-Nanoimprinted Distributed-Feedback Perovskite Lasing" href="NanoimprintedDFB.html" />
+    <link rel="prev" title="Distributed Feedback Lasers" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Distributed Feedback Lasers
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Coupled‐Wave Theory of Distributed Feedback Lasers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NanoimprintedDFB.html">UV-Nanoimprinted Distributed-Feedback Perovskite Lasing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/jangenoe/Coupled-Wave-Theory_DFB-Lasers/blob/master/Kogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/Coupled-Wave-Theory_DFB-Lasers" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/Coupled-Wave-Theory_DFB-Lasers/edit/master/Kogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jangenoe/Coupled-Wave-Theory_DFB-Lasers/issues/new?title=Issue%20on%20page%20%2FKogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Kogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Coupled‐Wave Theory of Distributed Feedback Lasers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-diagram-for-index-modulation-for-various-gain-to-coupling-parameter-ratios">Dispersion diagram for index modulation for various gain to coupling parameter ratios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-diagram-for-gain-modulation-for-various-gain-to-coupling-parameter-ratios">Dispersion diagram for gain modulation for various gain to coupling parameter ratios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-spectrum-for-index-coupling">Mode spectrum for index coupling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-spectrum-for-gain-coupling">Mode spectrum for gain coupling</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="coupledwave-theory-of-distributed-feedback-lasers">
+<h1>Coupled‐Wave Theory of Distributed Feedback Lasers<a class="headerlink" href="#coupledwave-theory-of-distributed-feedback-lasers" title="Permalink to this heading">#</a></h1>
+<p>This page comprises simulations from the manuscript H. Kogelnik and C. V. Shank, <em>Coupled‐Wave Theory of Distributed Feedback Lasers</em>. Journal of Applied Physics, <strong>43</strong> (1972) 2327–2335. <a class="reference external" href="https://doi.org/10.1063/1.1661499">doi:10.1063/1.1661499</a></p>
+<p>We compare the different simulations in the paper with our code.</p>
+<div class="cell docutils container">
+</div>
+<section id="dispersion-diagram-for-index-modulation-for-various-gain-to-coupling-parameter-ratios">
+<h2>Dispersion diagram for index modulation for various gain to coupling parameter ratios<a class="headerlink" href="#dispersion-diagram-for-index-modulation-for-various-gain-to-coupling-parameter-ratios" title="Permalink to this heading">#</a></h2>
+<p><a class="reference internal" href="#kogelnik1"><span class="std std-numref">Fig. 1</span></a> calculates the dispersion diagram for index modulation for various gain (<span class="math notranslate nohighlight">\(\alpha_o\)</span>) to coupling (<span class="math notranslate nohighlight">\(\kappa\)</span>) parameter ratios. In case of index modulation we have that <span class="math notranslate nohighlight">\(\kappa= \pi n_1/\lambda_o\)</span>. We observe that the calculated result fits the result from <span id="id1">[<a class="reference internal" href="bib.html#id3" title="H. Kogelnik and C. V. Shank. Coupled-Wave Theory of Distributed Feedback Lasers. Journal of Applied Physics, 43(5):2327–2335, May 1972. doi:10.1063/1.1661499.">1</a>]</span>, as can be seen in <a class="reference internal" href="#kogelnik2"><span class="std std-numref">Fig. 2</span></a>.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik1">
+<img alt="_images/5d335ab0967085de94b94e8375a9540b89fa996496fdff62ceadd76cb9f81efd.png" src="_images/5d335ab0967085de94b94e8375a9540b89fa996496fdff62ceadd76cb9f81efd.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Calculated dispersion diagram for index modulation for various gain to coupling parameter ratios</span><a class="headerlink" href="#kogelnik1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<figure class="align-center" id="kogelnik2">
+<a class="reference internal image-reference" href="_images/Kogelnik2.png"><img alt="Dispersion diagram" src="_images/Kogelnik2.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Dispersion diagram for index modulation for various gain to coupling parameter ratios</span><a class="headerlink" href="#kogelnik2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="dispersion-diagram-for-gain-modulation-for-various-gain-to-coupling-parameter-ratios">
+<h2>Dispersion diagram for gain modulation for various gain to coupling parameter ratios<a class="headerlink" href="#dispersion-diagram-for-gain-modulation-for-various-gain-to-coupling-parameter-ratios" title="Permalink to this heading">#</a></h2>
+<p><a class="reference internal" href="#kogelnik3"><span class="std std-numref">Fig. 3</span></a> calculates the dispersion diagram for index modulation for various gain (<span class="math notranslate nohighlight">\(\alpha_o\)</span>) to coupling (<span class="math notranslate nohighlight">\(\kappa\)</span>) parameter ratios. In case of index modulation we have that <span class="math notranslate nohighlight">\(\kappa= \frac{1}{2} j \alpha_1\)</span>. We observe that the calculated result fits <a class="reference internal" href="#kogelnik4"><span class="std std-numref">Fig. 4</span></a>.</p>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik3">
+<img alt="_images/3472c4a6070faaa29e840520a08d1f67c754d908a7239cbc3d978cb2ffbfcb5e.png" src="_images/3472c4a6070faaa29e840520a08d1f67c754d908a7239cbc3d978cb2ffbfcb5e.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Calculated dispersion diagram for gain modulation for various gain to coupling parameter ratios</span><a class="headerlink" href="#kogelnik3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<figure class="align-center" id="kogelnik4">
+<a class="reference internal image-reference" href="_images/Kogelnik4.png"><img alt="Dispersion diagram" src="_images/Kogelnik4.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Dispersion diagram for gain modulation for various gain to coupling parameter ratios</span><a class="headerlink" href="#kogelnik4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="mode-spectrum-for-index-coupling">
+<h2>Mode spectrum for index coupling<a class="headerlink" href="#mode-spectrum-for-index-coupling" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik5c">
+<img alt="_images/b6274490a4592069f8ecfe78645865c62686a6022af4fc79873a2acab088a9d9.png" src="_images/b6274490a4592069f8ecfe78645865c62686a6022af4fc79873a2acab088a9d9.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Calculated gain required for threshold vs frequency deviation from the Bragg condition for index modulation</span><a class="headerlink" href="#kogelnik5c" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<figure class="align-center" id="kogelnik5">
+<a class="reference internal image-reference" href="_images/Kogelnik5.png"><img alt="gain required" src="_images/Kogelnik5.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Plot of the gain required for threshold vs frequency deviation from the Bragg condition for an index modulation. Only half of the spectrum is shown because of symmetry.</span><a class="headerlink" href="#kogelnik5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="mode-spectrum-for-gain-coupling">
+<h2>Mode spectrum for gain coupling<a class="headerlink" href="#mode-spectrum-for-gain-coupling" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik7c">
+<img alt="_images/994232cdc4e71ef98a9da10e7d86c1b0189a004f70f02dd1c29e1ff11e82f5c0.png" src="_images/994232cdc4e71ef98a9da10e7d86c1b0189a004f70f02dd1c29e1ff11e82f5c0.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Calculated DC gain required for threshold vs frequency deviation from the Bragg condition for gain modulation</span><a class="headerlink" href="#kogelnik7c" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<figure class="align-center" id="kogelnik7">
+<a class="reference internal image-reference" href="_images/Kogelnik7.png"><img alt="gain required" src="_images/Kogelnik7.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Plot of the DC gain required for threshold vs frequency deviation from the Bragg condition for gain modulation. Only half of the spectrum is shown because of symmetry.</span><a class="headerlink" href="#kogelnik7" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik8c">
+<img alt="_images/60b727f3b722ec25ebb518911a7275af8c4a377449d533211e3808eab2f9edcb.png" src="_images/60b727f3b722ec25ebb518911a7275af8c4a377449d533211e3808eab2f9edcb.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Calculated gain at threshold vs coupling strength for various modes</span><a class="headerlink" href="#kogelnik8c" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<figure class="align-center" id="kogelnik8">
+<a class="reference internal image-reference" href="_images/Kogelnik8.png"><img alt="gain at threshold vs coupling strength" src="_images/Kogelnik8.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Plot of the gain at threshold vs coupling strength for various modes. The mode number N refers to a set of modes placed symmetrically about the Bragg frequency.</span><a class="headerlink" href="#kogelnik8" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik9c">
+<img alt="_images/da546e0693eb8c999df21cc837f1bd002aea638d1bb918dd872d646a2c789ac6.png" src="_images/da546e0693eb8c999df21cc837f1bd002aea638d1bb918dd872d646a2c789ac6.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Calculated gain at threshold vs coupling strength for various modes</span><a class="headerlink" href="#kogelnik9c" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<figure class="align-center" id="kogelnik9">
+<a class="reference internal image-reference" href="_images/Kogelnik9.png"><img alt="gain at threshold vs coupling strength" src="_images/Kogelnik9.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Plot of the gain at threshold vs coupling strength for various modes. The N=O mode corresponds to a mode at the Bragg frequency. The numbers N&gt;O correspond to a set of modes symmetrically placed about the Bragg frequency.</span><a class="headerlink" href="#kogelnik9" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik10c">
+<img alt="_images/50bf4acd7e4bd72b498c6ac0792b865da712f1e129ff39bc53d59d76c3ff6762.png" src="_images/50bf4acd7e4bd72b498c6ac0792b865da712f1e129ff39bc53d59d76c3ff6762.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Calculated gain at threshold vs coupling strength for various modes</span><a class="headerlink" href="#kogelnik10c" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<figure class="align-center" id="kogelnik10">
+<a class="reference internal image-reference" href="_images/Kogelnik10.png"><img alt="spatial intensity distribution" src="_images/Kogelnik10.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Plot of the spatial intensity distribution of the lowest order modes at various coupling levels.</span><a class="headerlink" href="#kogelnik10" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="kogelnik11a">
+<img alt="spatial intensity distribution" src="_images/Kogelnik11a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Plot of the spatial intensity distribution for the first three modes at <span class="math notranslate nohighlight">\(\pi n_i L/\lambda=0.25\)</span>.</span><a class="headerlink" href="#kogelnik11a" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik11ac">
+<img alt="_images/e145bacd340bcef303b6998539b1ddc7b6bb350fb194453c1db94d39d6f9b677.png" src="_images/e145bacd340bcef303b6998539b1ddc7b6bb350fb194453c1db94d39d6f9b677.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Calculated spatial intensity distribution for the first three modes</span><a class="headerlink" href="#kogelnik11ac" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik11bc">
+<img alt="_images/74cb0d262effcaa975755df1c5cce830d0ba5d8006edc72d9b55a73c17604bd4.png" src="_images/74cb0d262effcaa975755df1c5cce830d0ba5d8006edc72d9b55a73c17604bd4.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Calculated spatial intensity distribution for the first three modes</span><a class="headerlink" href="#kogelnik11bc" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<figure class="align-center" id="kogelnik11b">
+<img alt="spatial intensity distribution" src="_images/Kogelnik11b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Plot of the spatial intensity distribution for the first three modes at <span class="math notranslate nohighlight">\(\pi n_i L/\lambda=1\)</span>.</span><a class="headerlink" href="#kogelnik11b" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik11cc">
+<img alt="_images/6069f76d2b45a0ada451b8994c8e075f6eb2f58fc2c382c986c586dab4080840.png" src="_images/6069f76d2b45a0ada451b8994c8e075f6eb2f58fc2c382c986c586dab4080840.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Calculated spatial intensity distribution for the first three modes</span><a class="headerlink" href="#kogelnik11cc" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<figure class="align-center" id="kogelnik11c">
+<img alt="spatial intensity distribution" src="_images/Kogelnik11c.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Plot of the spatial intensity distribution for the first three modes at <span class="math notranslate nohighlight">\(\pi n_i L/\lambda=2\)</span>.</span><a class="headerlink" href="#kogelnik11c" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik11dc">
+<img alt="_images/46c85b98847252236e4ab7db10f1b447e4fa2947a2b9f15045e4d88a7bc18136.png" src="_images/46c85b98847252236e4ab7db10f1b447e4fa2947a2b9f15045e4d88a7bc18136.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Calculated spatial intensity distribution for the first three modes</span><a class="headerlink" href="#kogelnik11dc" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<figure class="align-center" id="kogelnik11d">
+<img alt="spatial intensity distribution" src="_images/Kogelnik11d.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Plot of the spatial intensity distribution for the first three modes at <span class="math notranslate nohighlight">\(\pi n_i L/\lambda=10\)</span>.</span><a class="headerlink" href="#kogelnik11d" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="kogelnik12a">
+<img alt="spatial intensity distribution" src="_images/Kogelnik12a.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Plot of the spatial intensity distribution for the first three modes at <span class="math notranslate nohighlight">\(\alpha L / 2 =0.25\)</span>.</span><a class="headerlink" href="#kogelnik12a" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik12bc">
+<img alt="_images/9af254fc974b2960d0a6ae9c5cde1d8ce1c2e3c43095fdb7013a63af778cde2d.png" src="_images/9af254fc974b2960d0a6ae9c5cde1d8ce1c2e3c43095fdb7013a63af778cde2d.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Calculated spatial intensity distribution for the first three modes at  L / 2 =1</span><a class="headerlink" href="#kogelnik12bc" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<figure class="align-center" id="kogelnik12b">
+<img alt="spatial intensity distribution" src="_images/Kogelnik12b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Plot of the spatial intensity distribution for the first three modes at <span class="math notranslate nohighlight">\(\alpha L / 2 =1\)</span>.</span><a class="headerlink" href="#kogelnik12b" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik12cc">
+<img alt="_images/55a8aac2b728baee58cc8290cb39de2d5e57e5d0bf252a901d16bd025b4a5e2f.png" src="_images/55a8aac2b728baee58cc8290cb39de2d5e57e5d0bf252a901d16bd025b4a5e2f.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Calculated spatial intensity distribution for the first three modes at  L / 2 =2</span><a class="headerlink" href="#kogelnik12cc" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<figure class="align-center" id="kogelnik12c">
+<img alt="spatial intensity distribution" src="_images/Kogelnik12c.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Plot of the spatial intensity distribution for the first three modes at <span class="math notranslate nohighlight">\(\alpha L / 2 =2\)</span>.</span><a class="headerlink" href="#kogelnik12c" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="cell docutils container">
+<div class="cell_output docutils container">
+<figure class="align-default" id="kogelnik12dc">
+<img alt="_images/41cdf44d5ebe76b878d43fa4cccdc97fdf293ece56b43a5f330b8cafa33e85ba.png" src="_images/41cdf44d5ebe76b878d43fa4cccdc97fdf293ece56b43a5f330b8cafa33e85ba.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Calculated spatial intensity distribution for the first three modes at  L / 2 =10</span><a class="headerlink" href="#kogelnik12dc" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<figure class="align-center" id="kogelnik12d">
+<img alt="spatial intensity distribution" src="_images/Kogelnik12d.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Plot of the spatial intensity distribution for the first three modes at <span class="math notranslate nohighlight">\(\alpha L / 2 =10\)</span>.</span><a class="headerlink" href="#kogelnik12d" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "kuleuven"
+        },
+        kernelOptions: {
+            name: "kuleuven",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'kuleuven'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Distributed Feedback Lasers</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="NanoimprintedDFB.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">UV-Nanoimprinted Distributed-Feedback Perovskite Lasing</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-diagram-for-index-modulation-for-various-gain-to-coupling-parameter-ratios">Dispersion diagram for index modulation for various gain to coupling parameter ratios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dispersion-diagram-for-gain-modulation-for-various-gain-to-coupling-parameter-ratios">Dispersion diagram for gain modulation for various gain to coupling parameter ratios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-spectrum-for-index-coupling">Mode spectrum for index coupling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-spectrum-for-gain-coupling">Mode spectrum for gain coupling</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jan Genoe (jan.genoe@imec.be)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
