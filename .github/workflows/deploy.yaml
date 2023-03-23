@@ -49,8 +49,6 @@ jobs:
           xindy
     - name: Build the Jupyterbook pdf
       run: |
-        mv ./files/_toc.yml ./files/_tochtml.yml
-        mv ./files/_tocpdf.yml ./files/_toc.yml
         jb build --builder pdflatex --all files/  
         mv ./files/_build/latex/python.pdf ./files/_build/latex/Coupled-Wave-Theory_DFB-Lasers.pdf
     - name: GitHub Pages action
