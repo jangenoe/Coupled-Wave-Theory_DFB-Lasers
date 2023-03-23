@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.3.23)  23 MAR 2023 23:02
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.3.23)  23 MAR 2023 23:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1648,12 +1648,7 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 98
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-Overfull \hbox (82.37027pt too wide) in paragraph at lines 98--98
- [][]
- []
-
-[1
+) [1
 
 ] (./python.toc
 LaTeX Info: Redefining \rmfamily on input line 1.
@@ -1671,7 +1666,8 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 \tf@toc=\write7
 \openout7 = `python.toc'.
 
- [1
+
+[1
 
 
 
