@@ -1,0 +1,6 @@
+format: jb-book
+root: intro
+chapters:
+- file: Kogelnik-Shank_Coupled-Wave-Theory_DFB-Lasers
+- file: NanoimprintedDFB
+- file: bib
