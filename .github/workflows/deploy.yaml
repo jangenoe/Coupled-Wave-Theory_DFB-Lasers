@@ -50,12 +50,12 @@ jobs:
     - name: Build the Jupyterbook website
       run: |
         jb build ./ --builder pdflatex
-        # mv ./_build/latex/python.pdf ./_build/html/Coupled-Wave-Theory_DFB-Lasers.pdf
+        # mv ./_build/latex/python.pdf ./_build/latex/Coupled-Wave-Theory_DFB-Lasers.pdf
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_build/html/Coupled-Wave-Theory_DFB-Lasers.pdf
+        publish_dir: ./_build/latex/
         
   build-jupyter-lite:
     needs: build-and-deploy-book

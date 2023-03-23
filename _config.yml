@@ -33,6 +33,11 @@ sphinx:
     latex_elements:
       extraclassoptions: 'openany,oneside'
       papersize: 'a4paper'
+      preamble: |+
+		% Fix citations in figure captions, from https://github.com/mcmtroffaes/sphinxcontrib-bibtex/issues/276#issuecomment-1102154800
+        \usepackage{etoolbox}
+        \AtBeginEnvironment{figure}{\pretocmd{\hyperlink}{\protect}{}{}}  
     bibtex_reference_style: label
     bibtex_default_style : "unsrt"
+
 
