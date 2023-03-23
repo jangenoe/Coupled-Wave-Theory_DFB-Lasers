@@ -1,11 +1,9 @@
-# Distributed Feedback Lasers
+# Introduction
 
-This repository applies the calculations of Kogelnik and Shank in J. Appl. Phys. 43, 2327 (1972) [1] to a few use cases. 
-The calculations have been validated by replotting the graphs from [1].
+This jupyter book applies the calculations of Kogelnik and Shank in J. Appl. Phys. 43, 2327 (1972) {cite:p}`kogelnikCoupledWaveTheory1972` to a few use cases. 
+The calculations have been validated by replotting the graphs from {cite:p}`kogelnikCoupledWaveTheory1972`.
+Each of the chapters elaborates one use case.
 
+The online version allows to recalculate all graphs in [jupyter-lite](https://jangenoe.github.io/Coupled-Wave-Theory_DFB-Lasers/Lite) (even without any code installed).
 
-## Table of contents
-```{tableofcontents}
-```
-
-[1] H. Kogelnik and C. V. Shank, Coupled Wave Theory of Distributed Feedback Lasers. Journal of Applied Physics, 43 (1972) 2327–2335. https://doi.org/10.1063/1.1661499.
+All code is available on [Github](https://github.com/jangenoe/Coupled-Wave-Theory_DFB-Lasers)
