@@ -1,0 +1,9 @@
+\selectlanguage *{english}
+\contentsline {chapter}{\numberline {1}Coupled\sphinxhyphen {}Wave Theory of Distributed Feedback Lasers}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Dispersion diagram for index modulation for various gain to coupling parameter ratios}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Dispersion diagram for gain modulation for various gain to coupling parameter ratios}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Mode spectrum for index coupling}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Mode spectrum for gain coupling}{4}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Spatial intensity distribution of the different modes}{4}{section.1.5}%
+\contentsline {chapter}{\numberline {2}UV\sphinxhyphen {}Nanoimprinted Distributed\sphinxhyphen {}Feedback Perovskite Lasing}{9}{chapter.2}%
+\contentsline {chapter}{Bibliography}{11}{chapter*.3}%
